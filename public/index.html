@@ -7,7 +7,7 @@
             $(document).ready(()=>{
                 $("#getData").click(()=>{
                     $.ajax({url: "http://localhost:3000/users", method:"get", success: (result)=>{
-                        $("#divbody").html(result.firstName+" "+result.lastName);
+                        $("#divbody").html(result.firstName+" "+result.lastName+" "+result.address.street);
                     }});    
                 });
             });
